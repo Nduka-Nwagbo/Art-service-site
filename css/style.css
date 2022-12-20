@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito:wght@400;700&display=swap');
+/*RESET*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea {
+    font: inherit;
+}
+/*CSS VARIABLES*/
+:root{
+    /*fonts*/
+    --FF: "Nunito", sans-serif;
+    --FF-HEADINGS: "Fugaz One", cursive;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+    
+    /*colors*/
+    --BGCOLOR: rgb(128, 66, 128);
+    --BGCOLOR-FADE: rgb(174, 155, 174);
+    --BGIMAGE: linear-gradient(to bottom, rgb(128, 66, 128), rgb(174, 155, 174));
+    --BODY-BGCOLOR: white;
+    --FONT-COLOR: black;
+    --BORDER-COLOR: rgb(34, 34, 34);
+    --HIGHLIGHT-COLOR: rgb(215, 25, 120);
+    --LINK-COLOR: black;
+    --LINK-HOVER: rgb(80, 80, 80);
+    --LINK-ACTIVE: rgb(237, 62, 164);
+    --HEADER-BGCOLOR: rgb(67, 33, 52);
+    --HEADER-COLOR: white;
+    --NAV-BGCOLOR: white;
+   
+    /*Borders*/
+    --BORDER: 1px solid var(--BORDER-COLOR); 
+   
+    /*standard-padding*/
+    --PADDING-TOP-BOTTOM: 0.5em;
+    --PADDING-SIDE: 2.5%;
+    /*standard-margin*/
+    --MARGIN: clamp(1em, 2.5vh, 1.5em);
+}
+
+/*UTILITY CLASSES*/
+ 
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.center {
+    text-align: center;
+}
+
+/*GENERAL STYLES*/
+html{
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
+}
+body{
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONTF-COLOR);
+    min-height: 100vh;
+    max-width: 850px;
+    margin: 0 auto;
+    border-left: var(--BORDER);
+    border-right: var(--BORDER);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+}
+h1, h2, h3 {
+    font-family: var(--FF-HEADINGS);
+}
+h3,h2{
+    margin-bottom: 1em;
+    color: var(--HIGHLIGHT-COLOR);
+}
+p{
+    line-height: 1.5;
+}
+a:any-link {
+    color: var(--LINK-COLOR);
+}
+a:hover, a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+/*HEADER*/
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.header__h1{
+    text-align: center;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+}
+.header__nav{
+    background-color: var(--NAV-BGCOLOR);
+    border-bottom: var(--BORDER);
+    font-weight: bold;
+    box-shadow: 0 6px 5px -5px var(--BORDER-COLOR);
+}
+.header__ul {
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    text-decoration: none;
+}
+.hero {
+    position: relative;
+}
+.hero__h2 { 
+    background-color:rgb(215, 25, 120, 0.5);
+    color: var(--HEADER-COLOR);
+    padding: 0.25em 0.5em;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 5px var(--BORDER-COLOR);
+    position: absolute;
+    left: 20px;
+    top: -100px;
+    animation: showWelcome 0.5s ease-in-out 1s forwards;
+}
+@keyframes showWelcome {
+    0% {
+        top: -20px;
+        scaleY(0);
+    }
+    80% {
+        top: 30px;
+        scaleY(1.2);
+    }
+    100% {
+        top: 20px;
+        scaleY(1)
+    }
+}
+/*FOOTER*/
+.footer{
+    position: sticky;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+    text-align: center;
+    
+}
+.main__h2{
+    text-align:center;
+    margin-top: 1em;
+}
+/*ABOUT*/
+.article__h2{
+    text-align: center;
+    margin-top: 1em;
+}
+.main__article{
+    display: flex;
+    flex-direction: column;
+}
+.mainArticle__p{
+    margin: 1rem;
+}
+/*SERVICES*/
+.article{
+    display: flex;
+    flex-direction: column;
+    
+}
+figcaption{
+    text-align: center;
+}
+.article__section{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 1em;
+}
+/*CONTACT*/
+.section__h2{
+    margin: 0;
+    margin-top: 1em;
+    text-align: center;
+}
+.section__form{
+    margin: 1rem;
+}
+.section__fieldset{
+    border: none;
+}
+.section__p{
+    margin: 1em 0;
+}
+.section__label{
+    display: block;
+    font-weight: bold;
+}
+.section__input, .section__textarea {
+    padding: 0.5em;
+    border-radius: 1.2rem;
+    width: 100%;
+}
+.section__button{
+    padding: 0.5em 1em;
+    border-radius: 1rem;
+    border-width: 10px;
+    border-style: none;
+    background-color:var(--HIGHLIGHT-COLOR);
+    }

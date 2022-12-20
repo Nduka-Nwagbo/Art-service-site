@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nduka Nwagbo">
+    <meta name="description" content="Official Website for Endy's Art">
+    <title>Endy's Art Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="JS/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__h1">Endy's Art Services</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li>
+                    <a href="#sec1">Home</a>
+                </li>
+                <li>
+                    <a href="#main">About</a>
+                </li>
+                <li>
+                    <a href="#menu">Services</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+                
+            </ul>
+        </nav>
+      
+    </header>
+     <section class="hero" id="sec1">
+        <h2 class="hero__h2">Welcome!</h2>
+        <figure>
+            <img src="img/sci fi2.jpg" alt="art1" width="1000" height="667">
+        </figure>
+       </section>
+    <main id="main">
+        <article id="about" class="main__article">
+            <h2 class="main__h2">About
+                 <abbr title="Endy's Art">Endy's Art</abbr>
+                </h2>
+                <figure>
+                    <img src="img/as.jpg" alt="as" width="1000" height="667">
+                </figure>
+                <div ><p class="mainArticle__p">
+                I started making digital art in <time datetime="2019">2019</time>. My freelance art services
+                started with the need to <strong>bring peoples character ideas to life</strong>. I draw character 
+                concepts, fan arts, environement concept art, 2d portraits and more.
+                 I hope my art can serve your purpose.
+                </p></div>
+        </article>
+        <article id="menu" class="article">
+            <h2 class="article__h2">My Services</h2>
+            <section class="article__section">
+             <figure>
+                <img src="img/statham shadows.jpg" alt="1 character" width="400" height="400">
+                <figcaption>1 character design - $15</figcaption>
+             </figure>
+             <figure>
+                <img src="img/m33.jpg" alt="1 character" width="400" height="400">
+                <figcaption>2 character desings - $15</figcaption>
+             </figure>
+             <figure>
+                <img src="img/afro tech fam fin.jpg" alt="1 character" width="400" height="400">
+                <figcaption>3+ characters - $30-40 negotiable</figcaption>
+             </figure>
+             <figure>
+                <img src="img/junk final.jpg" alt="1 character" width="400" height="400">
+                <figcaption>environment - $40-80 negotiable</figcaption>
+             </figure>
+                <figure>
+                <img src="img/sci color 3.jpg" alt="1 character" width="400" height="400">
+                <figcaption>environment with 2+ characters<br>$50-80 negotiable</figcaption>
+                </figure>
+            </section>
+        </article>
+    </main>
+    <section id="contact" class="section">
+     <h2 class="section__h2">Our contact form</h2>
+     <form class="section__form" action="https://httpbin.org/get" method="get">
+        <fieldset class="section__fieldset">
+            <legend class="offscreen">Send us a message</legend>
+            <p class="section__p">
+                <label class="section__label " for="email">Name:</label>
+                <input class="section__input" type="text" name="name" id="name" placeholder="your name" required>
+            </p>
+            <p class="section__p">
+                <label class="section__label " for="email">Email:</label>
+                <input class="section__input" type="text" name="email" id="email" placeholder="your email" required>
+            </p>
+            <p class="section__p">
+                <label class="section__label " for="message">Your message</label>
+                <br>
+                <textarea class="section__textarea" name="message" id="message" cols="30" rows="10" placeholder="type your message here"></textarea>
+            </p>
+        </fieldset>
+        <button class="section__button" type="submit">Send</button>
+        <button class="section__button" type="reset">Reset</button>
+     </form>
+    </section>
+    <footer class="footer">
+        <p>
+            <span>Copyright &copy; <time id="year"></time></span>
+            <span>Endy's Art</span>
+        </p>
+    </footer>
+</body>
+</html>
